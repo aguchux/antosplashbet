@@ -199,7 +199,7 @@
                                         <div class="text-3xl mt-5"><?= $TransactionInfo->id ?>
                                             <hr />
                                         </div>
-                                        <div class="text-gray-600 mt-2">SUPPER ODDS GAMES</div>
+                                        <div class="text-gray-600 mt-2">Anto Splash Bet GAMES</div>
                                     </div>
                                     <div class="text-left ml-5 mb-3">
                                         <p><strong>Full Name:

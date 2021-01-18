@@ -4,7 +4,7 @@
         <div class="hidden xl:flex flex-col min-h-screen">
             <a href="/auth/login" class="-intro-x flex items-center pt-5">
                 <img class="w-20" src="<?= $assets ?>images\logo.png">
-                <span class="text-white text-lg ml-3"> Supper<span class="font-medium">Odds</span> </span>
+                <span class="text-white text-lg ml-3"> AntoSplashBet </span>
             </a>
             <div class="my-auto">
                 <img class="-intro-x w-1/2 -mt-16" src="<?= $assets ?>images\illustration.svg">

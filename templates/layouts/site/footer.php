@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="bottom">
-            <div class="copyright pull_left">2020 SupperOdds.net Allrights Resvered. Licence: V067600.</div>
+            <div class="copyright pull_left">2020 antosplashbet.com Allrights Resvered. Licence: V067600.</div>
         </div>
     </div>
     <div class="border"></div>
@@ -71,7 +71,7 @@
                     <img src="<?= $assets ?>site\images\index\howtobet.png">
                 </div>
                 <div class="item-txt">
-                    <h4>Placing bets on Supper Odds is simple</h4>
+                    <h4>Placing bets on Anto Splash Bet is simple</h4>
                     <p>Copy the Odd/Game id and move to the cashier desk and ask  the cashier to stake the game for you. Tell cashier how much you intend to stack and ensure you collect a reciept bearing proof of game and the amount staked. Go to site and verify or check your ticket status any time any day.</p>
                 </div>
                 <div class="btn blue checkpromo"><a href="/track">Track Your Bet Now</a></div>

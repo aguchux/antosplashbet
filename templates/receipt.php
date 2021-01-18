@@ -50,7 +50,7 @@ if ($Self->auth) {
                     <div class="text-3xl">
                         <h2><?= $TransactionInfo->id ?></h2>
                     </div>
-                    <div class="text-gray-600">SUPPER ODDS GAMES</div>
+                    <div class="text-gray-600">Anto Splash Bet GAMES</div>
                 </center>
             </div>
             <hr class="my-1 p-0" />

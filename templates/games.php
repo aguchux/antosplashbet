@@ -6,7 +6,7 @@
     <div class="wrapper">
 
         <div class="pull_left session2-sport">
-            <h3>SPORTS MATCHES AND PREDICTIONS FROM SUPPER ODDS</h3>
+            <h3>SPORTS MATCHES AND PREDICTIONS FROM Anto Splash Bet</h3>
             <div class="top-events">
                 <div class="top-events__list">
                     <?php while ($odd = mysqli_fetch_object($HomeOdds)) : ?>

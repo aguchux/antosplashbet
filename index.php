@@ -13,13 +13,13 @@ $Route->add(
     function () {
 
         $Core = new Apps\Core;
-        $Template = new Apps\Template;
-        $Template->assign("title", "Welcome to Supper Odds");
-        $Template->addheader("layouts.site.header");
-        $Template->addfooter("layouts.site.footer");
+        $Template = new Apps\Template("/auth/login");
+        $Template->assign("title", "Welcome to Anto Splash Bet");
+        //$Template->addheader("layouts.site.header");
+        //$Template->addfooter("layouts.site.footer");
         $Template->assign("HomeOdds", $Core->HomeOdds(6));
         $Template->assign("menukey", "home");
-        $Template->render("home");
+        $Template->render("local");
     },
     'GET'
 );
@@ -174,13 +174,27 @@ $Route->add(
     '/auth/login',
     function () {
         $Template = new Apps\Template;
-        $Template->assign("title", "Login - SupperOdds.net");
+        $Template->assign("title", "Login - Anto Splash Bet");
         $Template->addheader("layouts.admin.auth-header");
         $Template->addfooter("layouts.admin.footer");
         $Template->render("login");
     },
     'GET'
 );
+
+
+$Route->add(
+    '/auth/fundsout',
+    function () {
+        $Template = new Apps\Template;
+        $Template->assign("title", "Out of funds - Anto Splash Bet");
+        $Template->addheader("layouts.admin.auth-header");
+        $Template->addfooter("layouts.admin.footer");
+        $Template->render("fundsout");
+    },
+    'GET'
+);
+
 
 $Route->add(
     '/form/auth/login',
@@ -195,8 +209,11 @@ $Route->add(
 
         $Login = $Core->UserLogin($email, $password);
         if ((int)$Login->accid) {
-            $Template->authorize($Login->accid);
-            $Template->redirect("/dashboard");
+            if ((int)$Login->enabled) {
+                $Template->authorize($Login->accid);
+                $Template->redirect("/dashboard");
+            }
+            $Template->redirect("/auth/login");
         }
         $Template->redirect("/auth/login");
     },
@@ -274,7 +291,7 @@ $Route->add(
     '/auth/register',
     function () {
         $Template = new Apps\Template;
-        $Template->assign("title", "Register - SupperOdds.net");
+        $Template->assign("title", "Register - AntoSplashBet.com");
         $Template->addheader("layouts.admin.auth-header");
         $Template->addfooter("layouts.admin.footer");
         $Template->render("register");
@@ -287,7 +304,7 @@ $Route->add(
     '/auth/reset',
     function () {
         $Template = new Apps\Template;
-        $Template->assign("title", "Reset Password - SupperOdds.net");
+        $Template->assign("title", "Reset Password - AntoSplashBet.com");
         $Template->addheader("layouts.admin.auth-header");
         $Template->addfooter("layouts.admin.footer");
         $Template->render("reset");
@@ -480,6 +497,15 @@ $Route->add('/form/dashboard/order/{oddid}', function ($oddid) {
     $email = $data->email;
     $mobile = $data->mobile;
     $amount = $data->amount;
+
+    $UserInfo = $Core->UserInfo($accid);
+    $credit =  (float) $UserInfo->credit;
+    $_amount = (float) $amount;
+
+    if($credit < $_amount){
+        $Template->redirect("/auth/fundsout");
+    }
+
     $paid = false;
     if (isset($data->paid)) {
         $paid = true;
@@ -539,7 +565,7 @@ $Route->add('/form/dashboard/order/{oddid}', function ($oddid) {
                         <hr class="my-0 p-0" />
                         <div class="text-left" style="margin-left: 0px; font-size: 140%; padding-left:5px">
                             <p style="border-bottom: 1px dotted #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Full Name:</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?= $MyClient->fullname ?></p>
-                            <p style="border-bottom: 1px dotted #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Telephone:</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?= $MyClient->mobile ?></p>    
+                            <p style="border-bottom: 1px dotted #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Telephone:</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?= $MyClient->mobile ?></p>
                         </div>
                         <div class="text-left" style="margin-left: 0px; font-size: 140%; padding-left:5px">
                             <p style="border-bottom: 1px dotted #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Your Odd:</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?= $Core->Monify($ThisOddInfo->odds) ?></p>

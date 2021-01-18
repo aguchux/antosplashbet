@@ -1,5 +1,5 @@
 {
-    "name": "betting/superodds",
+    "name": "betting/antosplashbet",
     "description": "Betting App",
     "type": "project",
     "version": "2.0.0",
@@ -11,8 +11,8 @@
     "authors": [
         {
             "name": "SuperOdds",
-            "email": "info@superodds.com",
-            "homepage": "https://superodds.com/",
+            "email": "info@antosplashbet.com",
+            "homepage": "https://antosplashbet.com/",
             "role": "Developer"
         }
     ],

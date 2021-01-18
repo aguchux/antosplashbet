@@ -50,12 +50,12 @@ define("auth_session_key", "logged_in");
 define("auth_url", "/auth/login");
 define("num_results_on_page", 5);
 
-define("domain", "http://supperodds.net/");
+define("domain", "https://antosplashbet.com/");
 
 define("db_host", "107.182.235.44");
-define("db_user", "azexgnyt_hixil");
-define("db_password", "q0DU50X8pwzSCAlttG3455k27XBxjylXCD3nDm");
-define("db", "azexgnyt_hixil");
+define("db_user", "zuxvirll_axdir");
+define("db_password", "q0DU50X8pwzSCAlttG3455k27lXCD3nDm");
+define("db", "zuxvirll_axdir");
 
 define("enable_otp_on_logon", true);
 define("otp_live_time", 1);
@@ -69,7 +69,7 @@ define("smslive_subaccount", "EBSGFINANCE");
 define("smslive_subaccount_password", "q0DU50X8pwzSCAlttGOryk27XBxjylXCD3nDm");
 define("smslive_api_key", "acdd4023-b6af-4479-a8a7-9ee45278c319");
 
-define("smslive_callback_url", "http://superodds.com/auth/smslive247/callback");
+define("smslive_callback_url", "http://antosplashbet.com/auth/smslive247/callback");
 
-define("notix_name", "Supper Odds");
-define("notix_email", "supperodds4@gmail.com");
+define("notix_name", "Antosplashbet");
+define("notix_email", "antosplashbet@gmail.com");

@@ -13,7 +13,7 @@
     
 <div style="margin-top:10px;">
     <p>Best regards,</p>
-    <strong>Supper Odds Team</strong><br/>
+    <strong>Anto Splash Bet Team</strong><br/>
     <em>We'll be glad to help, if you have any questions.</em>
 </div>
 </body>

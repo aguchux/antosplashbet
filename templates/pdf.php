@@ -13,7 +13,7 @@
             <div class="text-3xl">
                 <h2><small style="color:#000000;">Game I.D:</small><br /><?= $TransactionInfo->id ?></h2>
             </div>
-            <div style="margin: 1px auto;font-size: 150%;">SUPPER ODDS GAMES</div>
+            <div style="margin: 1px auto;font-size: 150%;">Anto Splash Bet GAMES</div>
         </div>
         <hr class="my-0 p-0" />
         <div class="text-left" style="margin-left: 0px; font-size: 140%; padding-left:5px">
