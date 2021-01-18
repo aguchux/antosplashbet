@@ -1,0 +1,53 @@
+{
+    "name": "betting/superodds",
+    "description": "Betting App",
+    "type": "project",
+    "version": "2.0.0",
+    "keywords": [
+        "psr4",
+        "template"
+    ],
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "SuperOdds",
+            "email": "info@superodds.com",
+            "homepage": "https://superodds.com/",
+            "role": "Developer"
+        }
+    ],
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "classmap": [
+            "_apps/",
+            "_apps/Apps/",
+            "_apps/Epson/"
+        ],
+        "psr-4": {
+            "Apps\\": [
+                "_apps/",
+                "_apps/Apps/",
+                "_apps/Epson/"
+            ]
+        }
+    },
+    "require": {
+        "php": ">=5.6.36",
+        "calcinai/php-imagick": "^0.1.2",
+        "grupocoqueiro/escpos-php": "^3.1",
+        "mike42/escpos-php": "^3.0",
+        "mpdf/mpdf": "^8.0",
+        "picqer/php-barcode-generator": "^2.0",
+        "verot/class.upload.php": "dev-master"
+    },
+    "scripts": {},
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "bin": [
+        "application"
+    ]
+}
