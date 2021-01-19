@@ -14,7 +14,8 @@
                         <p class="title">
                             <span class="icon-ftball">
                                 <img src="<?= $assets ?>site\images\footer\icon-footerlist.png" alt="footerlist">
-                            </span>About Us</p>
+                            </span>About Us
+                        </p>
                         <a href="#" class="link">SECURITY</a><br>
                         <a href="#" class="link">PRIVACY POLICY</a><br>
                     </div>
@@ -72,7 +73,7 @@
                 </div>
                 <div class="item-txt">
                     <h4>Placing bets on Anto Splash Bet is simple</h4>
-                    <p>Copy the Odd/Game id and move to the cashier desk and ask  the cashier to stake the game for you. Tell cashier how much you intend to stack and ensure you collect a reciept bearing proof of game and the amount staked. Go to site and verify or check your ticket status any time any day.</p>
+                    <p>Copy the Odd/Game id and move to the cashier desk and ask the cashier to stake the game for you. Tell cashier how much you intend to stack and ensure you collect a reciept bearing proof of game and the amount staked. Go to site and verify or check your ticket status any time any day.</p>
                 </div>
                 <div class="btn blue checkpromo"><a href="/track">Track Your Bet Now</a></div>
             </div>
@@ -122,6 +123,42 @@
 <script src="<?= $assets ?>site\js\jquery.countdown.min.js"></script>
 <script src="<?= $assets ?>site\js\jquery.fancybox.js"></script>
 <script src="<?= $assets ?>site\js\script-gotop.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#widgetCountries').widgetCountries({
+            widgetLeagueLocation: '#widgetLeague',
+            widgetLiveScoreLocation: '#widgetLiveScore',
+            widgetWidth: '19%',
+            preferentialLeagues: ['8634', '590', '589', '588', '468', '343', '262', '195', '176', '148']
+        });
+
+        var windowWidthSize = $(window).width();
+
+        if (windowWidthSize < 769) {
+            $('.logo-img-size-index').hide();
+            $('.switchButton').css('margin', '0 auto');
+            $('.mainPageHeader').css('margin', '0');
+            $('.mainPageHeader').hide();
+        }
+        $('.switchButton').click(function() {
+            if ($('.widgetLeague').length) {
+                $('.widgetLiveScore').toggle();
+                $('.callendar-select-for-mobile').toggle();
+                $('.widgetLeague').toggle();
+                if ($('.widgetLeague').is(":visible")) {
+                    $('.switchButton').html('Back to Live Score');
+                } else {
+                    $('.switchButton').html('Back to League Details');
+                }
+            }
+        });
+
+    });
+</script>
+
+
+
 </body>
 
 </html>

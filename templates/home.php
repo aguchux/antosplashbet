@@ -60,6 +60,15 @@
             </div>
         </div>
 
+
+        <div class="container">
+            <section id="widgetCountries"></section>
+            <section id="widgetLeague"></section>
+            <section id="widgetLiveScore"></section>
+        </div>
+
+
+
         <div class="pull_left session2-sport">
             <h3>SPORTS MATCHES AND PREDICTIONS FROM SUPPER</h3>
             <div class="top-events">
@@ -67,7 +76,9 @@
                     <?php while ($odd = mysqli_fetch_object($HomeOdds)) : ?>
                         <a href="javascript:;" class="top-event" style="margin-bottom: 10px;" data-fancybox="" data-src="#playbox" target="mainframe">
 
-                            <div class="top-event__league"><h2 style="font-size: 200%;"><?= $odd->id ?></h2></div>
+                            <div class="top-event__league">
+                                <h2 style="font-size: 200%;"><?= $odd->id ?></h2>
+                            </div>
                             <div class="top-event__main">
                                 <div class="top-event__team"><img src="<?= $assets ?>site\images\index\home.png" class="top-event__team-logo" alt="<?= $odd->home ?>">
                                     <div class="top-event__team-name"><?= $odd->home ?></div>

@@ -30,12 +30,20 @@
 	<meta name="msapplication-TileImage" content="<?= $assets ?>site/favicons/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 
+
+	<link rel="stylesheet" type="text/css" href="<?= $assets ?>site\widget\main-style.css">
+	<link rel="stylesheet" type="text/css" href="<?= $assets ?>site\widget\widgetCountries.css">
+
 	<link rel="stylesheet" href="<?= $assets ?>site/css\slick.css">
 	<link rel="stylesheet" href="<?= $assets ?>site/css\slick-theme.css">
 	<link rel="stylesheet" href="<?= $assets ?>site/css\odometer-theme-default.css">
 	<link rel="stylesheet" href="<?= $assets ?>site/css\jquery.fancybox.css">
 	<link rel="stylesheet" href="<?= $assets ?>css\pos1.scss">
 	<link rel="stylesheet" href="<?= $assets ?>site/css\main.css">
+
+	<script src="<?= $assets ?>site\widget\jqueryGlobals.js"></script>
+	<script src="<?= $assets ?>site\widget\jquery.widgetCountries.js" type="text/javascript"></script>
+
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn’t work if you view the page via file:// -->
@@ -46,7 +54,7 @@
 <![endif]-->
 </head>
 
-<body>
+<body class="headerMenuDisplay">
 	<!-- include Header -->
 	<header>
 		<div class="wrapper">
@@ -62,6 +70,8 @@
 			<div class="icon message pull_right notify"><a data-fancybox="" data-src="#playbox" href="javascript:;" target="mainframe"></a>MESSAGE</div>
 			<div class="icon livechat pull_right">info@antosplashbet.com</div>
 		</div>
+
+
 	</header>
 	<!-- include Header -->
 	<nav>
