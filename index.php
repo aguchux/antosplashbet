@@ -15,11 +15,11 @@ $Route->add(
         $Core = new Apps\Core;
         $Template = new Apps\Template("/auth/login");
         $Template->assign("title", "Welcome to Anto Splash Bet");
-        //$Template->addheader("layouts.site.header");
-        //$Template->addfooter("layouts.site.footer");
+        $Template->addheader("layouts.site.header");
+        $Template->addfooter("layouts.site.footer");
         $Template->assign("HomeOdds", $Core->HomeOdds(6));
         $Template->assign("menukey", "home");
-        $Template->render("local");
+        $Template->render("home");
     },
     'GET'
 );
