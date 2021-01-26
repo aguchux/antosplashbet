@@ -124,39 +124,33 @@
 <script src="<?= $assets ?>site\js\jquery.fancybox.js"></script>
 <script src="<?= $assets ?>site\js\script-gotop.js"></script>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#widgetCountries').widgetCountries({
-            widgetLeagueLocation: '#widgetLeague',
-            widgetLiveScoreLocation: '#widgetLiveScore',
-            widgetWidth: '19%',
-            preferentialLeagues: ['8634', '590', '589', '588', '468', '343', '262', '195', '176', '148']
-        });
-
-        var windowWidthSize = $(window).width();
-
-        if (windowWidthSize < 769) {
-            $('.logo-img-size-index').hide();
-            $('.switchButton').css('margin', '0 auto');
-            $('.mainPageHeader').css('margin', '0');
-            $('.mainPageHeader').hide();
+<script>
+  (function(b, s, p, o, r, t) {
+    b["broadage"] = b["broadage"] || [];
+    if (!b["broadage"].length) {
+      r = document.createElement(s);
+      t = document.getElementsByTagName(s)[0];
+      r.async = true;
+      r.src = p;
+      t.parentNode.insertBefore(r, t);
+    }
+    b["broadage"].push({ "bundleId": o.bundleId, "widgets": o.widgets, "accountId": o.accountId });
+  })(window, "script", "//cdn-saas.broadage.com/widgets/loader/loader.js", {
+    "bundleId": ["soccer-fx"],
+    "accountId": "c5feca02-8056-4606-a529-73a61c825390",
+    "widgets": {
+      "soccerFixture": [{
+        "element": "DOM_element_id_in_your_website_1611050568434",
+        "tournamentId": 3,
+        "options": {
+          "detailedScoreVerticalSlide": true,
+          "theme": "beige",
+          "redirectType": "_parent"
         }
-        $('.switchButton').click(function() {
-            if ($('.widgetLeague').length) {
-                $('.widgetLiveScore').toggle();
-                $('.callendar-select-for-mobile').toggle();
-                $('.widgetLeague').toggle();
-                if ($('.widgetLeague').is(":visible")) {
-                    $('.switchButton').html('Back to Live Score');
-                } else {
-                    $('.switchButton').html('Back to League Details');
-                }
-            }
-        });
-
-    });
+      }]
+    }
+  });
 </script>
-
 
 
 </body>

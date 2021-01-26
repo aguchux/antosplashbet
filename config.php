@@ -73,3 +73,6 @@ define("smslive_callback_url", "http://antosplashbet.com/auth/smslive247/callbac
 
 define("notix_name", "Antosplashbet");
 define("notix_email", "antosplashbet@gmail.com");
+
+define("low_credit_limit", 0);
+

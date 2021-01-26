@@ -37,7 +37,7 @@ if ($Self->auth) {
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="GOLOJAN">
-    <title>Super Odds Admin</title>
+    <title>Admin Dashboard</title>
     <!-- BEGIN: CSS Assets-->
 
     <!--Data Tables -->

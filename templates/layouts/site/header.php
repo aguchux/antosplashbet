@@ -41,10 +41,6 @@
 	<link rel="stylesheet" href="<?= $assets ?>css\pos1.scss">
 	<link rel="stylesheet" href="<?= $assets ?>site/css\main.css">
 
-	<script src="<?= $assets ?>site\widget\jqueryGlobals.js"></script>
-	<script src="<?= $assets ?>site\widget\jquery.widgetCountries.js" type="text/javascript"></script>
-
-
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn’t work if you view the page via file:// -->
 

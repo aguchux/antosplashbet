@@ -11,6 +11,10 @@
                     <a href="/dashboard" class="ml-auto flex text-theme-1 dark:text-theme-10"> <i data-feather="refresh-ccw" class="w-4 h-4 mr-3"></i> Reload Data </a>
                 </div>
 
+                <?php if ($UserInfo->credit <= low_credit_limit) : ?>
+                    <div class="text-danger text-theme-6"><h1 class="text-danger text-theme-6">You have a low credit balance in your wallet</h1></div>
+                <?php endif; ?>
+
                 <div class="grid grid-cols-12 gap-6 mt-5">
                     <div class="col-span-12 sm:col-span-6 xl:col-span-3 intro-y">
                         <div class="report-box zoom-in">

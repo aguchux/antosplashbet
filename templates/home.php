@@ -49,6 +49,7 @@
 
 <div class="session2">
     <div class="wrapper">
+    
         <div class="pull_left session2-num">
             <div class="block">
                 <p class="title">To Get a Super Big Win Now!</p>
@@ -60,13 +61,7 @@
             </div>
         </div>
 
-
-        <div class="container">
-            <section id="widgetCountries"></section>
-            <section id="widgetLeague"></section>
-            <section id="widgetLiveScore"></section>
-        </div>
-
+        <div class="mb-4" id="DOM_element_id_in_your_website_1611050568434"></div>
 
 
         <div class="pull_left session2-sport">

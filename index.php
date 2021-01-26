@@ -13,7 +13,7 @@ $Route->add(
     function () {
 
         $Core = new Apps\Core;
-        $Template = new Apps\Template("/auth/login");
+        $Template = new Apps\Template;
         $Template->assign("title", "Welcome to Anto Splash Bet");
         $Template->addheader("layouts.site.header");
         $Template->addfooter("layouts.site.footer");
@@ -560,7 +560,7 @@ $Route->add('/form/dashboard/order/{oddid}', function ($oddid) {
                             <div class="text-3xl">
                                 <h2><small style="color:#000000;">Game I.D:</small><br /><?= $TransactionInfo->id ?></h2>
                             </div>
-                            <div style="margin: 1px auto;font-size: 150%;">SUPPER ODDS GAMES</div>
+                            <div style="margin: 1px auto;font-size: 150%;">ANTOSPLASH BET</div>
                         </div>
                         <hr class="my-0 p-0" />
                         <div class="text-left" style="margin-left: 0px; font-size: 140%; padding-left:5px">
@@ -849,7 +849,7 @@ $Route->add('/receipt/{transid}/print', function ($transid) {
                 <div class="text-3xl">
                     <h2><small style="color:#000000;">Game I.D:</small><br /><?= $TransactionInfo->id ?></h2>
                 </div>
-                <div style="margin: 1px auto;font-size: 150%;">SUPPER ODDS GAMES</div>
+                <div style="margin: 1px auto;font-size: 150%;">ANTOSPLASH BET</div>
             </div>
             <hr class="my-0 p-0" />
             <div class="text-left" style="margin-left: 0px; font-size: 140%; padding-left:5px">
@@ -931,7 +931,7 @@ $Route->add('/receipt/{transid}/pdf', function ($transid) {
                 <div class="text-3xl">
                     <h2><small style="color:#000000;">Game I.D:</small><br /><?= $TransactionInfo->id ?></h2>
                 </div>
-                <div style="margin: 1px auto;font-size: 150%;">SUPPER ODDS GAMES</div>
+                <div style="margin: 1px auto;font-size: 150%;">ANTOSPLASH BET</div>
             </div>
             <hr class="my-0 p-0" />
             <div class="text-left" style="margin-left: 0px; font-size: 140%; padding-left:5px">
